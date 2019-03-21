@@ -17,6 +17,7 @@ If no song is input, LIRI returns the information for "I Believe I Can Fly" by R
 3. "movie-this"
 LIRI will check the OMDB API for the movie title input by the user.
 If no movie is input, LIRI returns the information for "Good Will Hunting"
+![Screenshot](/movies.png)
 
 
 * In progress 
