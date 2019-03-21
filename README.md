@@ -12,6 +12,7 @@ Dates format is returned via moment.js
 2. "spotify-this"
 LIRI will check the Spotify API for the song title input by the user.
 If no song is input, LIRI returns the information for "I Believe I Can Fly" by R. Kelly
+![Screenshot](/songs.png)
 
 3. "movie-this"
 LIRI will check the OMDB API for the movie title input by the user.

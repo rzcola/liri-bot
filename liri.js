@@ -26,7 +26,7 @@ array.splice(-1);
 var songSearch = array.join("");
 var movieName = array.join("");
 var concertSearch = array.join("");
-// var doThis = array.join("");
+var doThis = array.join("");
 
 
 //Switch statement for the commands entered for movies, concert, spotify---------------
@@ -44,7 +44,7 @@ switch (type) {
     break;
 
   case "do-what-it-says":
-    doIt();
+    doThis();
     break;
 
   default:
@@ -113,6 +113,28 @@ function concertThis() {
         });
     }
   }
+  function doThis(){
+    fs.readFile("random.txt", "utf8", function(error, data) {
+
+        // If the code experiences any errors it will log the error to the console.
+        if (!doThis) {
+          doThis = "Good Will Hunting";
+      }
+      
+        // We will then print the contents of data
+        // console.log(data);
+      
+        // Then split it by commas (to make it more readable)
+        var dataArr = data.split(",");
+        dataArr[1] = dataArr[1].replace(/(\r\n|\n|\r)/gm, "");
+        // We will then re-display the content as an array for later use.
+        // console.log(dataArr[1]);
+
+        searchSong(JSON.parse(dataArr[1]));
+      });
+      
+  }
+      
   
 
 // function searchSong(songName){
