@@ -6,8 +6,12 @@ var Spotify = require('node-spotify-api');
 var keys = require("./keys.js");
 var moment = require("moment");
 
+// var spotify = new Spotify(keys.spotify);
+// console.log(spotify)
+
+//  hides spotify keys 
+var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
-console.log(spotify)
 var query = process.argv;
 var type = process.argv[2];
 var array = [];
@@ -22,6 +26,7 @@ array.splice(-1);
 var songSearch = array.join("");
 var movieName = array.join("");
 var concertSearch = array.join("");
+// var doThis = array.join("");
 
 
 //Switch statement for the commands entered for movies, concert, spotify---------------
@@ -144,7 +149,7 @@ function concertThis() {
 //       console.log(err);
 //     });
 // }
-// function readFile(){
+// function doThis(){
 //     fs.readFile("random.txt", "utf8", function(error, data) {
 
 //         // If the code experiences any errors it will log the error to the console.
@@ -162,8 +167,9 @@ function concertThis() {
 //         // console.log(dataArr[1]);
 
 //         searchSong(JSON.parse(dataArr[1]));
-      
 //       });
+      
+//      };
       
 // }
 // searchSong("PRBLMS");
